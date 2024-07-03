@@ -8,7 +8,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: ls
+      - run: ls ${{ github.workspace }}
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 8.x
