@@ -10,11 +10,8 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
-      - name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}
-      - uses: actions/setup-dotnet@v4
+      - name: Add dotnet tools
+        uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 8.x
-          # cache: true
       - run: dotnet test ./katas/katas.sample.test\
