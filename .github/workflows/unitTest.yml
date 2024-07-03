@@ -17,4 +17,4 @@ jobs:
         with:
           dotnet-version: 8.x
           # cache: true
-      - run: dotnet --version
+      - run: dotnet test .\katas\katas.sample.test\
