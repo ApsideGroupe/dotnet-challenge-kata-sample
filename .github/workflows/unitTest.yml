@@ -16,10 +16,9 @@ jobs:
           dotnet-version: 8.x
       - run: dotnet test ./katas/katas.sample.test --logger "trx,LogFileName=katas-sample-test-result.trx" || true
       - name: Test report
-        uses: dorny/test-reporter@v1
+        uses: actions/upload-artifact@v3
         if: always()    # run this step even if previous step failed
         with:
           name: Kata Tests            # Name of the check run which will be created
-          path: "**/katas-sample-test-result.trx"    # Path to test results
-          reporter: dotnet-trx
+          path: "**/*.trx"    # Path to test results
           fail-on-error: true  
