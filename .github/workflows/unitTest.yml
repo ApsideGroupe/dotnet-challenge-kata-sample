@@ -14,7 +14,7 @@ jobs:
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 8.x
-      - run: dotnet test ./katas/katas.sample.test --logger "trx,LogFileName=katas-sample-test-result.trx" || true
+      - run: dotnet test ./katas/katas.sample.test --logger "trx,LogFileName=katas-sample-test-result.trx"
       - name: Test report
         uses: actions/upload-artifact@v3
         if: always()    # run this step even if previous step failed
