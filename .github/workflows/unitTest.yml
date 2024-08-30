@@ -17,7 +17,7 @@ jobs:
       - run: dotnet test ./katas/katas.sample.test --logger "trx,LogFileName=katas-sample-test-result.trx"
       - name: Test report
         uses: actions/upload-artifact@v3
-        if: success()    # run this step even if previous step failed
+        if: always()    # run this step even if previous step failed
         with:
           name: Kata Tests            # Name of the check run which will be created
           path: "**/*.trx"    # Path to test results
