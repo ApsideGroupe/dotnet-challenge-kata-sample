@@ -1,0 +1,24 @@
+name: Kata validation
+on:
+  pull_request:
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    permissions: write-all
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Add dotnet tools
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.x
+      - name: Run test(s)
+        run: dotnet test ./katas/katas.sample.test
+      - name: Publish test result
+        uses: dorny/test-reporter@v1
+        if: success() || failure()    # run this step even if previous step failed
+        with:
+          name: Kata result            # Name of the check run which will be created
+          reporter: dotnet-trx
+          path: '**/*.trx'  # Path to test results
