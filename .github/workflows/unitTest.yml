@@ -5,10 +5,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pull-requests: write
-      repository-projects: write
+    permissions: write-all
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
