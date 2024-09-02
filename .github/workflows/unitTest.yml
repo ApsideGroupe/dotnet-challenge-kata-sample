@@ -12,7 +12,7 @@ jobs:
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 8.x
-      - run: dotnet test ./katas/katas.sample.test --logger "trx;LogFileName=Katas_sample_test_results.trx"
+      - run: dotnet test ./katas/katas.sample.test
       - run: ls katas/katas.sample.test/TestResults
       - name: Test report
         uses: dorny/test-reporter@v1
@@ -20,4 +20,4 @@ jobs:
         with:
           name: Kata Tests            # Name of the check run which will be created
           reporter: dotnet-trx
-          path: katas/katas.sample.test/TestResults/*.trx  # Path to test results
+          path: TestResults/*.trx  # Path to test results
