@@ -12,8 +12,8 @@ jobs:
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 8.x
-      - run: ls */*
       - run: dotnet test ./katas/katas.sample.test --logger "trx;LogFileName=Katas_sample_test_results.trx"
+      - run: ls katas/katas.sample.test/TestResults
       - name: Test report
         uses: dorny/test-reporter@v1
         if: success() || failure()    # run this step even if previous step failed
