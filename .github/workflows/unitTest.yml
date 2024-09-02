@@ -1,9 +1,9 @@
-name: PR unit test
+name: Kata validation
 on:
   pull_request:
 
 jobs:
-  test:
+  unit-tests:
     runs-on: ubuntu-latest
     permissions: write-all
     steps:
@@ -13,13 +13,12 @@ jobs:
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 8.x
-      - run: dotnet test ./katas/katas.sample.test
-      - run: ls katas/katas.sample.test/TestResults
-        if: always()
-      - name: Test report
+      - name: Run test(s)
+        run: dotnet test ./katas/katas.sample.test
+      - name: Publish test result
         uses: dorny/test-reporter@v1
         if: success() || failure()    # run this step even if previous step failed
         with:
-          name: Kata Tests            # Name of the check run which will be created
+          name: Kata result            # Name of the check run which will be created
           reporter: dotnet-trx
-          path: katas/katas.sample.test/TestResults/*.trx  # Path to test results
+          path: '**/*.trx'  # Path to test results
