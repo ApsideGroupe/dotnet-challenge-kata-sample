@@ -8,7 +8,7 @@
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
     <VSTestLogger>trx%3bLogFileName=$(MSBuildProjectName).trx</VSTestLogger>
-    <VSTestResultsDirectory>$(MSBuildThisFileDirectory)/TestResults/</VSTestResultsDirectory>
+    <VSTestResultsDirectory>$(MSBuildThisFileDirectory)TestResults/</VSTestResultsDirectory>
   </PropertyGroup>
 
   <ItemGroup>
