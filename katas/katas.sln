@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34916.146
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "katas.sample", "katas\katas.sample.csproj", "{570C6B8A-0885-4C62-A81A-484C1794DD09}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Katas.Sample", "Katas.Sample\Katas.Sample.csproj", "{570C6B8A-0885-4C62-A81A-484C1794DD09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "katas.sample.test", "katas.sample.test\katas.sample.test.csproj", "{8535ACAD-1CC3-48A1-8029-8F84A59CC1DD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Katas.Sample.test", "Katas.Sample.test\Katas.Sample.test.csproj", "{8535ACAD-1CC3-48A1-8029-8F84A59CC1DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

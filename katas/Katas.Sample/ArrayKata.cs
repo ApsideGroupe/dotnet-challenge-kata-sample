@@ -1,4 +1,4 @@
-﻿namespace katas.sample;
+﻿namespace Katas.Sample;
 
 public static class ArrayKata
 {
