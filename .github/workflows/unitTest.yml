@@ -20,4 +20,4 @@ jobs:
         with:
           name: Kata Tests            # Name of the check run which will be created
           reporter: dotnet-trx
-          path: "**/*.trx"    # Path to test results
+          path: katas/katas.sample.test/TestResults/*.trx  # Path to test results
