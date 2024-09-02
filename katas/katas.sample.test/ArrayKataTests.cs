@@ -1,7 +1,7 @@
-using katas.sample;
+using Katas.Sample;
 
 [TestFixture]
-public class KataTests
+public class ArrayKataTests
 {
     [TestCase(new[] { 1, 2, 3, 4 }, new[] { 5, 6, 7, 8 }, new[] { 1, 2, 3, 4, 5, 6, 7, 8 })]
     [TestCase(new[] { 1, 3, 5, 7, 9 }, new[] { 10, 8, 6, 4, 2 }, new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 })]
