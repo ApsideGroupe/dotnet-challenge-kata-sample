@@ -1,8 +1,7 @@
 name: PR unit test
-
 on:
   pull_request:
-
+    types: [opened]
 
 jobs:
   test:
