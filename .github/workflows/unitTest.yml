@@ -14,10 +14,11 @@ jobs:
           dotnet-version: 8.x
       - run: dotnet test ./katas/katas.sample.test
       - run: ls katas/katas.sample.test/TestResults
+        if: always()
       - name: Test report
         uses: dorny/test-reporter@v1
         if: success() || failure()    # run this step even if previous step failed
         with:
           name: Kata Tests            # Name of the check run which will be created
           reporter: dotnet-trx
-          path: TestResults/*.trx  # Path to test results
+          path: katas/katas.sample.test/TestResults/*.trx  # Path to test results
