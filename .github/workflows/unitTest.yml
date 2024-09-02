@@ -13,7 +13,7 @@ jobs:
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 8.x
-      - run: dotnet test ./Katas/Katas.Sample.Test --logger "trx;LogFileName=Katas_sample_test_results.trx"
+      - run: dotnet test ./katas/Katas.Sample.Test --logger "trx;LogFileName=Katas_sample_test_results.trx"
       - name: Test report
         uses: dorny/test-reporter@v1
         if: success() || failure()    # run this step even if previous step failed
